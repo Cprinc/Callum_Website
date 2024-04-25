@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Website Index</title>
+    <title>My-Projects</title>
     <style>
         /* Define the .container class */
         .container {
@@ -14,7 +14,7 @@
         }
         .button-group {
             display: inline-block; /*Creates display type for the buttons*/
-            grid-template-columns: repeat(3, auto); /*How many buttons to go through */
+            grid-template-columns: repeat(2, auto); /*How many buttons to go through */
         }
         .my-button {
             padding: 5px 30px; /*Size of buttons*/
@@ -25,24 +25,17 @@
 </head>
 <body>
     <div class="container">
-        <h1>My Website</h1>
-        <p>A website created by me: Callum Prince.</p>
+        <h1>Projects List</h1>
+        <p>Here are a list of projects I am working on: </p>
+
         <div class="button-group">
-            <button class="my-button" onclick="openProjectsPage()">Projects</button> 
-            <button class="my-button" onclick="openAboutMePage()">About-Me</button>
-            <button class="my-button" onclick="openProjectsPage()">Contact Me</button>
+            <button class="my-button" onclick="reOpenIndexPage()">Back To Index</button>
         </div>
     </div>
 
     <script>
-        function openAboutMePage(){
-            window.location.href ='About-Me.html'
-        }
-        function openProjectsPage(){
-            window.location.href = 'projects.html'
-        }
-        function openContactMePage(){
-            window.location.href = 'Projects.html'
+        function reOpenIndexPage(){
+            window.location.href ='index.html'
         }
     </script>
 </body>
