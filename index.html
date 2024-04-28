@@ -7,19 +7,34 @@
     <style>
         /* Define the .container class */
         .container {
-            padding: 20px; /* Add padding as needed */
-            background-color: #2041b7; /* Set a background color */
-            /* Other styling properties */
-            color: white /*Change color of all text in this container*/
+            padding: 20px;
+            background-color: #2041b7;
+            color: white;
+            position: relative; /* Make the container a positioning context */
+            min-height: 100vh; /* Ensure the container takes up at least the full viewport height */
         }
+
         .button-group {
-            display: inline-block; /*Creates display type for the buttons*/
-            grid-template-columns: repeat(3, auto); /*How many buttons to go through */
+            position: absolute; /* Position the buttons absolutely */
+            top: 50px; /* Adjust the distance from the top */
+            left: 50%; /* Center the buttons horizontally */
+            transform: translateX(-50%); /* Adjust to center the buttons */
+            text-align: center; /* Center the text within the buttons */
         }
+
         .my-button {
             padding: 5px 30px; /*Size of buttons*/
             margin-right: 20px; /*How much space between buttons  (To the right)*/
+            border-radius: 4px;
+            cursor: pointer;
             
+        }
+
+        .my-button:hover {
+            opacity: 0.9;
+        }
+        .my-button:active{
+            opacity: 0.7;
         }
     </style>
 </head>
@@ -30,7 +45,7 @@
         <div class="button-group">
             <button class="my-button" onclick="openProjectsPage()">Projects</button> 
             <button class="my-button" onclick="openAboutMePage()">About-Me</button>
-            <button class="my-button" onclick="openProjectsPage()">Contact Me</button>
+            <button class="my-button" onclick="openContactMePage()">Contact Me</button>
         </div>
     </div>
 
@@ -42,7 +57,7 @@
             window.location.href = 'projects.html'
         }
         function openContactMePage(){
-            window.location.href = 'Projects.html'
+            window.location.href = 'Contact-Me.html'
         }
     </script>
 </body>
